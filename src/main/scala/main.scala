@@ -4,14 +4,16 @@ import DataStructures.Item
 object main {
 
   def main(args: Array[String]): Unit = {
-    checkItemNegativePrice()
-    checkItemZeroPrice()
+    //checkItemNegativePrice()
+    //checkItemZeroPrice()
     //checkItemNegativeAmount()
     //checkItemZeroAmount()
     //checkLoadFunction()
     //checkSaveFunction()
     //checkPrintReporter()
+    var mainFlow: MainFlow  = new MainFlow()
   }
+
 
 
   def checkLoadFunction(): Unit = {
@@ -22,14 +24,7 @@ object main {
   }
 
   def checkSaveFunction(): Unit = {
-    <items>
-      <item name="a" amount="100" price="10" totalPrice="1000"></item>
-      <item name="b" amount="10" price="10" totalPrice="100"></item>
-      <item name="c" amount="1" price="10" totalPrice="10"></item>
-      <item name="d" amount="1" price="1" totalPrice="1"></item>
-    </items>
-
-    var a = new Item("a",100,10)
+    var a = new Item("a",-100,10)
     var b = new Item("b",10,10)
     var c = new Item("c",1,10)
     var d = new Item("d",1,1)

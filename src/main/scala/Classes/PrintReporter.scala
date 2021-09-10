@@ -24,10 +24,9 @@ class PrintReporter extends IReporter {
 
     for (((a,b),(c,d)) <- (itemNames zip itemAmounts) zip (itemPrices zip itemTotals))
     {
-      str += "Item name: " +a +"\n" +" Amount bought: " +b +" Price per each: " +c +" Total Amount spent on item: "+d +"\n"
+      str += "Item name " +a +"\n" +"Amount bought: " +b +" Price per each: " +c +" Total Amount spent on item: "+d +"\n"
       sum += (d.toString()).toDouble
     }
-
 
     str += "TOTAL AMOUNT: " +sum
     println(str)

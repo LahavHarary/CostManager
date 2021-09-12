@@ -1,11 +1,9 @@
-Item name a
-Amount bought: 10 Price per each: 0.0 Total Amount spent on item: 0.0
-Item name b
-Amount bought: 10 Price per each: 10.0 Total Amount spent on item: 100.0
-Item name c
-Amount bought: 10 Price per each: 1.0 Total Amount spent on item: 10.0
-Item name d
-Amount bought: 1 Price per each: 1.0 Total Amount spent on item: 1.0
-Item name king
-Amount bought: 100 Price per each: 100.0 Total Amount spent on item: 10000.0
-TOTAL AMOUNT: 10111.0
+Item name E1
+Amount bought: 3 Price per each: 5.0 Total Amount spent on item: 15.0
+Item name E2
+Amount bought: 2 Price per each: 5.2 Total Amount spent on item: 10.4
+Item name E3
+Amount bought: 1 Price per each: 5.4 Total Amount spent on item: 5.4
+Item name E4
+Amount bought: 4 Price per each: 5.6 Total Amount spent on item: 22.4
+TOTAL AMOUNT: 53.199999999999996

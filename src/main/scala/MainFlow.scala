@@ -23,8 +23,7 @@ class MainFlow {
     choice = scala.io.StdIn.readChar()
 
   }
-
-  println("Good Bye")
+  println("Goodbye Have a nice day!")
 
   /* Functions that assists newFile and existingFile*/
   def makeAnXMLFile(itemList: List[Item]) = {

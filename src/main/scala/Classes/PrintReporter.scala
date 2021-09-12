@@ -10,7 +10,8 @@ class PrintReporter extends IReporter {
     printToScreen();
   }
 
-  def printToScreen(): Unit ={
+
+  private def printToScreen(): Unit ={
     val useXML: UseXML = new UseXML()
     val xmlData = useXML.getXMLData()
 

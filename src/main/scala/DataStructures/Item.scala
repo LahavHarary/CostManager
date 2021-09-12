@@ -1,6 +1,6 @@
 package DataStructures
 
-class Item(var nameFrom: String ,var priceFrom: Double ,var amountFrom: Int) {
+class Item(private var nameFrom: String ,private var priceFrom: Double ,private var amountFrom: Int) {
 
   if(priceFrom < 0){
     priceFrom = 0
@@ -14,7 +14,7 @@ class Item(var nameFrom: String ,var priceFrom: Double ,var amountFrom: Int) {
   def amount: String = amountFrom.toString
   def total: String = (priceFrom*amountFrom).toString
 
-  override def toString: String = "item name is " +name +"\n" +"amount of items: " +
-    "" +amount +" price per item: " +price +" total: " +total
+  override def toString: String = "Item name " +name +"\n" +
+    "Amount bought: " +amount +" Price per each: " +price +" Total Amount spent on item: "+total +"\n"
 
 }

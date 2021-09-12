@@ -1,5 +1,11 @@
-import Classes.{PrintReporter, UseXML}
+import Classes.{PrintReporter, TextReporter, UseXML, WordReporter}
 import DataStructures.Item
+
+import java.io._
+import java.io.IOException
+import java.nio.file.{Files, Paths}
+import scala.collection.mutable.ListBuffer
+import scala.xml.Null
 
 object main {
 
@@ -12,9 +18,19 @@ object main {
     //checkSaveFunction()
     //checkPrintReporter()
     var mainFlow: MainFlow  = new MainFlow()
+
+    //var wordReporter: WordReporter = new WordReporter()
+    //wordReporter.report()
+
+    //var buffer = loadExistingFile()
+    //for(item <- buffer){
+    //  print(item)
+    //}
+
+    //val textReporter: TextReporter = new TextReporter()
+    //textReporter.report()
+
   }
-
-
 
   def checkLoadFunction(): Unit = {
     var useXml = new UseXML();

@@ -7,7 +7,7 @@ import scala.xml._
 
 class UseXML {
 
-  def getXMLData(): scala.xml.Elem = {
+  def getXMLData(): scala.xml.Elem ={
     val xmlData = xml.XML.loadFile("file.xml")
     return xmlData
   }

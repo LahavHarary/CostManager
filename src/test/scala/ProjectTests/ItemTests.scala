@@ -1,7 +1,12 @@
 package ProjectTests
-
 import org.scalatest.funsuite.AnyFunSuite
 import DataStructures.Item
+
+/*
+Lahav Harary 316012517
+Omer Gez 313329302
+*/
+
 
 class ItemTests extends AnyFunSuite {
   val item1 = new Item("test", 5.0, 3)

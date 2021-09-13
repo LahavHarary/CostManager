@@ -1,11 +1,17 @@
-package Classes
+package FileHandler
 import DataStructures.Item
 
 import java.nio.file.{Files, Paths}
 import scala.collection.mutable.ListBuffer
 import scala.xml._
 
-class UseXML {
+/*
+Lahav Harary 316012517
+Omer Gez 313329302
+*/
+
+
+object UseXML {
 
   def getXMLData(): scala.xml.Elem ={
     val xmlData = xml.XML.loadFile("file.xml")
@@ -28,7 +34,7 @@ class UseXML {
 
     if(Files.exists(Paths.get("file.xml")) == false){println("file not found")}
     else {
-      val existingXMLFile = (new UseXML).getXMLData()
+      val existingXMLFile = UseXML.getXMLData()
       val itemNames = (existingXMLFile \\ "@name")
       val itemAmounts = (existingXMLFile \\ "@amount")
       val itemPrices = (existingXMLFile \\ "@price")

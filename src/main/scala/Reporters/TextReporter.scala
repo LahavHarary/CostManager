@@ -1,10 +1,17 @@
-package Classes
+package Reporters
 
+import FileHandler.UseXML
 import Traits.IReporter
 
 import java.io.{File, PrintWriter}
 
-class TextReporter extends IReporter {
+/*
+Lahav Harary 316012517
+Omer Gez 313329302
+*/
+
+
+object TextReporter extends IReporter {
   override def report(): Unit = {
     saveAsTxt()
   }
@@ -13,14 +20,13 @@ class TextReporter extends IReporter {
     val pw = new PrintWriter(new File("hello.txt"))
     var str: String = ""
     var sum: Double = 0
-    val useXML: UseXML = new UseXML();
-    var dataFromXML = (useXML.loadExistingFile()).toList
+    var dataFromXML = (UseXML.loadExistingFile()).toList
 
     for (item <- dataFromXML) {
       str += item.toString()
       sum += item.total.toDouble
     }
-    str += "TOTAL AMOUNT: " + sum
+    str += "TOTAL AMOUNT: " + sum + "\n"
 
     pw.write(str)
     pw.close()

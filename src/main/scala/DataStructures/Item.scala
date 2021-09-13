@@ -1,5 +1,11 @@
 package DataStructures
 
+/*
+Lahav Harary 316012517
+Omer Gez 313329302
+*/
+
+
 class Item(private var nameFrom: String ,private var priceFrom: Double ,private var amountFrom: Int) {
 
   if(priceFrom < 0){

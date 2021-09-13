@@ -5,41 +5,49 @@ import DataStructures.Item
 
 import java.nio.file.{Files, Paths}
 
-/*
+/**
 Lahav Harary 316012517
 Omer Gez 313329302
 */
 
+/**
+* In this class we are checking if the UseXML object is working properly.
+*/
 
 class UseXMLTests extends AnyFunSuite {
-  val item1:Item = new Item("E1", 5.0, 3)
-  val item2:Item = new Item("E2", 5.2, 2)
-  val item3:Item = new Item("E3", 5.4, 1)
-  val item4:Item = new Item("E4", 5.6, 4)
 
+  // At first, we create 4 items and 2 item lists (full list and empty list)
+  val firstItem:Item = new Item("E1", 5.0, 3)
+  val secondItem:Item = new Item("E2", 5.2, 2)
+  val thirdItem:Item = new Item("E3", 5.4, 1)
+  val fourthItem:Item = new Item("E4", 5.6, 4)
 
-  val itemList1:List[Item] = List[Item](item1,item2,item3,item4)
-  val itemList2:List[Item] = List[Item]()
+  val firstItemList:List[Item] = List[Item](firstItem,secondItem,thirdItem,fourthItem)
+  val secondItemList:List[Item] = List[Item]()
 
-  //write valid file test
+  //We are checking that a non empty list creates a file
   test("Create a new file from list with data"){
-    UseXML.writeXMLData(itemList1)
+    UseXML.writeXMLData(firstItemList)
     assert(Files.exists(Paths.get("file.xml")) == true)
   }
+  //We are checking that an empty list creates a file
   test("Create a new file from list without data"){
-    UseXML.writeXMLData(itemList2)
+    UseXML.writeXMLData(secondItemList)
     assert(Files.exists(Paths.get("file.xml")) == true)
   }
 
-  //read from xml test
+  /**
+  * Check our read xml function: we are checking each one of our items from
+  * firstItemList vs the item that came back from writeXMLData
+  */
   test("Same list when you write and load xml"){
-    UseXML.writeXMLData(itemList1)
+    UseXML.writeXMLData(firstItemList)
     val tempItems: List[Item] = UseXML.loadExistingFile().toList
-    for (i:Int <- 0 until itemList1.length){
-      assert(tempItems(i).name == itemList1(i).name)
-      assert(tempItems(i).price == itemList1(i).price)
-      assert(tempItems(i).amount == itemList1(i).amount)
-      assert(tempItems(i).total == itemList1(i).total)
+    for (i:Int <- 0 until firstItemList.length){
+      assert(tempItems(i).name == firstItemList(i).name)
+      assert(tempItems(i).price == firstItemList(i).price)
+      assert(tempItems(i).amount == firstItemList(i).amount)
+      assert(tempItems(i).total == firstItemList(i).total)
     }
   }
 

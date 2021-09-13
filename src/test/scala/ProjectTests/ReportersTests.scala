@@ -29,12 +29,12 @@ class ReportersTests extends AnyFunSuite{
   // A test to see if a docs file was created.
   test("Create a new word/doc file"){
     WordReporter.report()
-    assert(Files.exists(Paths.get("hello.docs")) == true)
+    assert(Files.exists(Paths.get("report.docs")) == true)
   }
   // A test to see if a txt file was created.
   test("Create a new txt file"){
     TextReporter.report()
-    assert(Files.exists(Paths.get("hello.txt")) == true)
+    assert(Files.exists(Paths.get("report.txt")) == true)
   }
 
 }
